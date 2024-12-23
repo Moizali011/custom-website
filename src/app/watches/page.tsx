@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from 'next/image';
 const Watches = () => {
   const watchData = [
     { id: 1, name: 'Rolex', price: 12000, description: 'Luxury watch', image: '/rolex.png' },
@@ -15,7 +15,7 @@ const Watches = () => {
       <div className="watches">
         {watchData.map((watch) => (
           <div key={watch.id} className="watch-card">
-            <img src={watch.image} alt={watch.name} />
+            <Image width={200} height={200} src={watch.image} alt={watch.name} />
             <h3>{watch.name}</h3>
             <p>{watch.description}</p>
             <div className="price">${watch.price}</div>
